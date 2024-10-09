@@ -14,39 +14,41 @@
 
 <body>
     <div class="bg">
-        <div class="container bg">
-            <div class="row">
-                <div class="col-12">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
                     <h1 class="heading mt-5">Two Pass Assembler</h1>
                 </div>
             </div>
-            <p class="para">Upload Files</p>
-            <hr style="height:2px;background-color:gray">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="file-upload">
-                        <label class="para1">Input File (input.txt):</label>
-                        <input type="file" id="inputFile" accept=".txt" required>
+            <p class="para text-center">Upload Files</p>
+            <hr>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5">
+                    <div class="file-upload text-center">
+                        <label for="inputFile" class="para1">Input File (input.txt):</label>
+                        <input type="file" id="inputFile" accept=".txt" class="file-input">
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <div class="file-upload">
-                        <label class="para1">Optab File (optab.txt):</label>
-                        <input type="file" id="optabFile" accept=".txt" required>
+                <div class="col-12 col-md-5">
+                    <div class="file-upload text-center">
+                        <label for="optabFile" class="para1">Optab File (optab.txt):</label>
+                        <input type="file" id="optabFile" accept=".txt" class="file-input">
                     </div>
                 </div>
             </div>
-            <button id="runButton" class="btn btn-primary mt-3">Run</button>
+            <div class="row justify-content-center">
+                <button id="runButton" class="btn btn-primary mt-4">Run</button>
+            </div>
 
             <!-- Tabbed Output Section -->
-            <div class="row mt-3">
+            <div class="row mt-5">
                 <div class="col-12">
-                    <ul class="nav nav-tabs" id="outputTabs">
+                    <ul class="nav nav-tabs justify-content-center" id="outputTabs">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#intermediateOutputTab">Intermediate Output</a>
+                            <a class="nav-link active" data-toggle="tab" href="#intermediateOutputTab">Intermediate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#symtabOutputTab">SYMTAB Output</a>
+                            <a class="nav-link" data-toggle="tab" href="#symtabOutputTab">SYMTAB</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" data-toggle="tab" href="#outputTab">Output</a>
@@ -58,35 +60,28 @@
                             <a class="nav-link" data-toggle="tab" href="#programLengthTab">Program Length</a>
                         </li>
                     </ul>
-                    <div class="tab-content">
+                    <div class="tab-content mt-3">
                         <div class="tab-pane fade show active" id="intermediateOutputTab">
-                            <label for="intermediateOutput">Intermediate Output</label>
-                            <textarea id="intermediateOutput" readonly></textarea>
+                            <textarea id="intermediateOutput" class="output-box" readonly></textarea>
                         </div>
                         <div class="tab-pane fade" id="symtabOutputTab">
-                            <label for="symtabOutput">SYMTAB Output</label>
-                            <textarea id="symtabOutput" readonly></textarea>
+                            <textarea id="symtabOutput" class="output-box" readonly></textarea>
                         </div>
                         <div class="tab-pane fade" id="outputTab">
-                            <label for="output">Output</label>
-                            <textarea id="output" readonly></textarea>
+                            <textarea id="output" class="output-box" readonly></textarea>
                         </div>
                         <div class="tab-pane fade" id="objectCodeTab">
-                            <label for="objectCode">Object Code</label>
-                            <textarea id="objectCode" readonly></textarea>
+                            <textarea id="objectCode" class="output-box" readonly></textarea>
                         </div>
                         <div class="tab-pane fade" id="programLengthTab">
-                            <label for="programLengthOutput">Program Length:</label>
-                            <textarea id="programLengthOutput" readonly></textarea>
+                            <textarea id="programLengthOutput" class="output-box" readonly></textarea>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="box d-flex flex-column justify-content-end">
-            <div>
-                <p class="copy">Copyright © 2024 TwoPassAssembler | By Anakin Rajeev</p>
-            </div>
+        <div class="footer mt-5">
+            <p class="copy text-center">Copyright © 2024 TwoPassAssembler | By Anakin Rajeev</p>
         </div>
     </div>
 
